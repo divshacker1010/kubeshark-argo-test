@@ -5,7 +5,7 @@
   {{- $finalResourceId := printf "%s.atropossubscription.%s" $.Release.Namespace (required "CR name is required" $subscription.crName) }}
   {{- $finalResourceName := printf "%s.%s" (required "Tenant Code is required" $subscription.tenantCode) $finalResourceId }}
 ---
-apiVersion: rrsd.zetaapps.in/v1alpha1
+apiVersion: v2
 kind: AtroposSubscription
 metadata:
   name: {{ $finalResourceName }}
